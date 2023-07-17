@@ -1,0 +1,263 @@
+:root {
+  --primarycololr: #ff274b;
+  --secondaryColor: #969393;
+  --lightColor: #ddd4d4;
+  --bgColor-1: #171a1c;
+  --bgColor-2: #22282a;
+  --blue: #3261fc;
+  --z1: #ffd700;
+  --padding: 8%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  /* font-size: 12px; */
+  font-size: 62.5%;
+
+  color: var(--lightColor);
+}
+
+span {
+  color: var(--primarycololr);
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+nav {
+  padding: 2.4rem;
+  background-color: var(--bgColor-2);
+  padding-left: var(--padding);
+  padding-right: var(--padding);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0.8rem 1.5rem;
+}
+
+nav ul li a {
+  color: var(--lightColor);
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.3s;
+  font-size: 1.8rem;
+}
+
+nav ul li a:hover {
+  color: var(--primarycololr);
+}
+
+h1 {
+  font-size: 7.6rem;
+  padding: 1.8rem 0;
+}
+
+h3 {
+  font-size: 3.2rem;
+  margin-bottom: 3.6rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  padding-bottom: var(--padding);
+  color: var(--secondaryColor);
+}
+
+h5 {
+font-size: 1.6rem;
+margin: 1.4rem 0;
+letter-spacing: 2px;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.prim-btns {
+  background-color: var(--primarycololr);
+  color: var(--lightColor);
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 3rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+
+  transition: 0.3s;
+  background-color: transparent;
+  border: 1px solid var(--primarycololr);
+}
+
+.prim-btns:hover {
+  background-color: #fd606031;
+  color: var(--lightColor);
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bgColor-1);
+  padding-top: 20rem;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: var(--padding);
+  justify-content: space-between;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.hello {
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  color: var(--secondaryColor);
+}
+
+.social {
+  margin-top: 4.6rem;
+}
+
+.social img {
+  margin-right: 2rem;
+  width: 2.4rem;
+  transition: 0.3s;
+}
+
+.social img:hover {
+  transform: scale(1.3);
+}
+
+.hero-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-img img {
+  width: 65%;
+  height: 100%;
+
+  border-radius: 10px;
+  border: 1px solid var(--primarycololr);
+  z-index: 10;
+
+  /* transform: translate(0, 0); */
+}
+
+.hero-img::before, .hero-img::after {
+  content: "";
+  display: block;
+  width: 65%;
+  height: 100%;
+  border-radius: 7px;
+  position: absolute;
+  border: 1px solid var(--primarycololr);
+  background-color: var(--bgColor-2);
+  z-index: 2;
+}
+
+.hero-img::before {
+   top: 4%;
+  left: 20%;
+  /* transform: translate(0%, 0%); */
+}
+
+.hero-img::after {
+   top: -4%;
+  left: 15%;
+  /* transform: translate(0%, 0%); */
+}
+
+/* **********************************************************
+************************** General
+************************************************************* */
+.grid-2-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-4-col {
+  display: grid;
+  grid-template-columns: repeat(1fr);
+}
+
+.img-content img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 65%;
+  height: 100%;}
+
+.center {
+  text-align: center;
+}
+
+/* **********************************************************
+************************** About Section
+************************************************************* */
+
+.about {
+  background-color: var(--bgColor-2);
+  padding: var(--padding);
+}
+
+.about-img img {
+  width: 65%;
+}
+
+/* **********************************************************
+************************** Services Section
+************************************************************* */
+
+.services {
+  background-color: var(--bgColor-1);
+
+}
+
+.box {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* **********************************************************
+************************** Skills Section
+************************************************************* */
+
+/* **********************************************************
+************************** Projects Section
+************************************************************* */
+
+/* **********************************************************
+************************** Contact Section
+************************************************************* */
