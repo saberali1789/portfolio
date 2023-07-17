@@ -151,6 +151,7 @@ p {
   margin-right: 2rem;
   width: 2.4rem;
   transition: 0.3s;
+  
 }
 
 .social img:hover {
@@ -242,14 +243,31 @@ p {
 
 .services {
   background-color: var(--bgColor-1);
+  padding: 3.2rem var(--padding);
 
 }
 
 .box {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  text-align: center;
+  padding: 5.6rem  0;
 }
 
+.card {
+  width: 30rem;
+  background-color: var(--bgColor-2);
+  border-radius: 20px;
+  padding: 1.3rem 2rem;
+  text-align: start;
+}
+
+.card i {
+  font-size: 3.2rem;
+  text-align: center;
+  color: var(--primarycololr);
+  margin: 1.8rem;
+}
 /* **********************************************************
 ************************** Skills Section
 ************************************************************* */
