@@ -39,6 +39,7 @@ h2 {
   position: fixed;
   width: 100%;
   z-index: 100;
+  box-shadow: 0 0px 5px rgba(161, 0, 0, 0.575);
 }
 
 nav {
@@ -87,9 +88,9 @@ h4 {
 }
 
 h5 {
-font-size: 1.6rem;
-margin: 1.4rem 0;
-letter-spacing: 2px;
+  font-size: 1.6rem;
+  margin: 1.4rem 0;
+  letter-spacing: 2px;
 }
 
 p {
@@ -150,10 +151,9 @@ p {
 }
 
 .social img {
-  margin-right: 2rem;
-  width: 2.4rem;
+  margin: 0 1.4rem;
+  width: 2.6rem;
   transition: 0.3s;
-  
 }
 
 .social img:hover {
@@ -178,7 +178,8 @@ p {
   /* transform: translate(0, 0); */
 }
 
-.hero-img::before, .hero-img::after {
+.hero-img::before,
+.hero-img::after {
   content: "";
   display: block;
   width: 65%;
@@ -191,13 +192,13 @@ p {
 }
 
 .hero-img::before {
-   top: 4%;
+  top: 4%;
   left: 20%;
   /* transform: translate(0%, 0%); */
 }
 
 .hero-img::after {
-   top: -4%;
+  top: -4%;
   left: 15%;
   /* transform: translate(0%, 0%); */
 }
@@ -220,7 +221,8 @@ p {
   align-items: center;
   justify-content: center;
   width: 65%;
-  height: 100%;}
+  height: 100%;
+}
 
 .center {
   text-align: center;
@@ -246,14 +248,13 @@ p {
 .services {
   background-color: var(--bgColor-1);
   padding: 3.2rem var(--padding);
-
 }
 
 .box {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  padding: 5.6rem  0;
+  padding: 5.6rem 0;
   gap: 2rem;
 }
 
@@ -275,113 +276,146 @@ p {
 ************************** Skills Section
 ************************************************************* */
 
-		
-		/* SKILLS STYLES */
+/* SKILLS STYLES */
 
-    .skills-container{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 80vh;
-      background-color: var(--bgColor-2);
+.skills-section {
+  background-color: var(--bgColor-2);
+  padding: var(--padding);
+ 
+}
+
+.skills-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills-container {
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; */
+  background-color: var(--bgColor-2);
+}
+
+.skills {
+  /* height: 450px; */
+  width: 600px;
+  margin-top: 6.4rem;
+  background-color: var(--bgColor-1);
+  border-radius: 10px;
+  /* box-shadow: 0 3px 15px 0 rgba(255, 0, 0, 0.144); */
+  box-shadow: 0;
+  padding: 20px 40px;
+}
+.skills h2 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  color: var(--primarycololr);
+  text-align: center;
+}
+.skills li {
+  list-style: none;
+  margin: 30px 0;
+  color: var(--lightColor);
+}
+.skills-header {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.skillbar {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  border: 1px solid var(--lightColor);
+  padding: 2px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.skillbar span {
+  display: block;
+  position: relative;
+  height: 100%;
+  /* width: 80%; */
+  border-radius: 10px;
+  background-image: linear-gradient(to right, #ff00002f, var(--primarycololr));
+}
+.html {
+  width: 80%;
+  animation: html 2s ease-in;
+}
+.css {
+  width: 93%;
+  animation: css 2s ease-in;
+}
+.js {
+  width: 60%;
+  animation: js 2s ease-in;
+}
+.react {
+  width: 70%;
+  animation: react 2s ease-in;
+}
+.node {
+  width: 50%;
+  animation: node 2s ease-in;
+}
+
+@keyframes html {
+  from {
+    width: 10%;
   }
-  
-  .skills{
-      height: 450px;
-      width: 600px;
-      background-color: var(--bgColor-1);
-      border-radius: 10px;
-      box-shadow: 0 0px 20px 0 var(--secondary);
-      padding: 20px 40px;
+  to {
+    width: 80%;
   }
-  .skills h2{
-      font-size: 3rem;
-      letter-spacing: 1px;
-      color: var(--text);
-      text-align: center;
+}
+@keyframes css {
+  from {
+    width: 10%;
   }
-  .skills li{
-      list-style: none;
-      margin: 30px 0;
-      color: var(--secondary);
+  to {
+    width: 93%;
   }
-  .skills-header{
-      font-size: 2rem ;
-      font-weight: 500;
+}
+@keyframes js {
+  from {
+    width: 10%;
   }
-  .skillbar{
-      position: relative;
-      width: 100%;
-      height: 15px;
-      border: 1px solid var(--secondary);
-      padding: 2px;
-      margin-top: 10px;
-      border-radius: 10px;
+  to {
+    width: 60%;
   }
-  .skillbar span{
-      display: block;
-      position: relative;
-      height: 100%;
-      /* width: 80%; */
-      border-radius: 10px;
-      background-image: linear-gradient(to right, var(--secondary), var(--text));
+}
+@keyframes react {
+  from {
+    width: 10%;
   }
-  .html {
-      width: 80%;
-      animation: html 2s ease-in;
+  to {
+    width: 70%;
   }
-  .css {
-      width: 93%;
-      animation: css 2s ease-in;
+}
+@keyframes node {
+  from {
+    width: 0%;
   }
-  .js {
-      width: 60%;
-      animation: js 2s ease-in;
+  to {
+    width: 50%;
   }
-  .react {
-      width: 70%;
-      animation: react 2s ease-in;
-  }
-  .node {
-      width: 50%;
-      animation: node 2s ease-in;
-  }
-  
-  @keyframes html{
-      from {
-          width: 10%;
-      }to{
-          width: 80%;
-      }
-  }
-  @keyframes css{
-      from {
-          width: 10%;
-      }to{
-          width: 93%;
-      }
-  }
-  @keyframes js{
-      from {
-          width: 10%;
-      }to{
-          width: 60%;
-      }
-  }
-  @keyframes react{
-      from {
-          width: 10%;
-      }to{
-          width: 70%;
-      }
-  }
-  @keyframes node{
-      from {
-          width: 0%;
-      }to{
-          width: 50%;
-      }
-  }
+}
+
+
+.img-skill{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.img-skill img {
+/* width: 80%; */
+
+width: 8rem;
+
+}
+
 /* **********************************************************
 ************************** Projects Section
 ************************************************************* */
