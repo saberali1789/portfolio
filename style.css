@@ -436,6 +436,55 @@ font-size: 5.4rem;
 /* **********************************************************
 ************************** Projects Section
 ************************************************************* */
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.project{
+  position: relative;
+  height: 350px;
+  width: 300px;
+  transition: all .5s ease-in-out;
+}
+.project img{
+  width: 100%;
+}
+.info{
+  position: absolute;
+  display: none;
+}
+.project:hover .info{
+display: block;
+top: 0;
+background-color:#3261fc3d ;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+transition: .5s ease;
+padding: 1rem;
+}
+.links{
+  width: 100%;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.links i{
+  color: var(--primarycololr);
+  
+}
+.links i:hover{
+  color: var(--blue);
+  cursor: pointer;
+
+}
 
 /* **********************************************************
 ************************** Contact Section
