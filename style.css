@@ -402,20 +402,37 @@ p {
   }
 }
 
+.img-skill-content {
+  display: flex;
+  width: 600px;
+  gap : 3.2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-right: 10rem;
+}
 
-.img-skill{
-display: flex;
-justify-content: center;
+
+.skill-div {
+  width: 4rem;
+  height: 4rem;
+  background-color: rgb(255, 230, 230);
+  border-radius: 50%;
+  border: 1px solid var(--primarycololr);
+  padding: 4.2rem;
+  display: flex;
 align-items: center;
+justify-content: center;
 }
 
-.img-skill img {
-/* width: 80%; */
-
-width: 8rem;
-
+.skill-div i {
+font-size: 5.4rem;
 }
 
+.skill-div img {
+  width: 5.4rem;
+  height: 5.4rem;
+}
 /* **********************************************************
 ************************** Projects Section
 ************************************************************* */
