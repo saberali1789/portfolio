@@ -6,8 +6,7 @@
   --lightColor: #ddd4d4;
   --bgColor-1: #171a1c;
   --bgColor-2: #22282a;
-  --blue: #3261fc;
-  --z1: #ffd700;
+
   --padding: 8%;
 }
 
@@ -15,11 +14,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 html {
   font-family: "Poppins", sans-serif;
-  /* font-size: 12px; */
+
   font-size: 62.5%;
 
   color: var(--lightColor);
@@ -168,39 +168,13 @@ p {
 }
 
 .hero-img img {
-  width: 65%;
-  height: 100%;
+  width: 70%;
 
   border-radius: 10px;
-  border: 1px solid var(--primarycololr);
+  /* border: 1px solid var(--primarycololr); */
   z-index: 10;
 
   /* transform: translate(0, 0); */
-}
-
-.hero-img::before,
-.hero-img::after {
-  content: "";
-  display: block;
-  width: 65%;
-  height: 100%;
-  border-radius: 7px;
-  position: absolute;
-  border: 1px solid var(--primarycololr);
-  background-color: var(--bgColor-2);
-  z-index: 2;
-}
-
-.hero-img::before {
-  top: 4%;
-  left: 20%;
-  /* transform: translate(0%, 0%); */
-}
-
-.hero-img::after {
-  top: -4%;
-  left: 15%;
-  /* transform: translate(0%, 0%); */
 }
 
 /* **********************************************************
@@ -221,7 +195,7 @@ p {
   align-items: center;
   justify-content: center;
   width: 65%;
-  height: 100%;
+
 }
 
 .center {
@@ -264,6 +238,11 @@ p {
   border-radius: 20px;
   padding: 1.3rem 2rem;
   text-align: start;
+  transition: all 0.5s ease;
+}
+.card:hover {
+  border: var(--primarycololr) solid 1px;
+  transition: 0.5s ease;
 }
 
 .card i {
@@ -281,7 +260,6 @@ p {
 .skills-section {
   background-color: var(--bgColor-2);
   padding: var(--padding);
- 
 }
 
 .skills-content {
@@ -405,13 +383,12 @@ p {
 .img-skill-content {
   display: flex;
   width: 600px;
-  gap : 3.2rem;
+  gap: 3.2rem;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   padding-right: 10rem;
 }
-
 
 .skill-div {
   width: 4rem;
@@ -421,12 +398,12 @@ p {
   border: 1px solid var(--primarycololr);
   padding: 4.2rem;
   display: flex;
-align-items: center;
-justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .skill-div i {
-font-size: 5.4rem;
+  font-size: 5.4rem;
 }
 
 .skill-div img {
@@ -436,38 +413,58 @@ font-size: 5.4rem;
 /* **********************************************************
 ************************** Projects Section
 ************************************************************* */
-.projects{
+.projects-section {
+  padding: var(--padding);
+  background-color: var(--bgColor-1);
+}
+.projects {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
   justify-content: center;
 }
-.project{
+.project {
   position: relative;
-  height: 350px;
-  width: 300px;
-  transition: all .5s ease-in-out;
+  height: 300px;
+  width: 400px;
+  transition: all 0.5s ease-in-out;
+  border: var(--primarycololr) 1px solid;
+  border-radius: 9px;
+  overflow: hidden;
 }
-.project img{
-  width: 100%;
+.projects-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.info{
+.front {
+  height: 100%;
+}
+.project img {
+  height: 100%;
+  background-size: cover;
+}
+.info {
   position: absolute;
   display: none;
 }
-.project:hover .info{
-display: block;
-top: 0;
-background-color:#3261fc3d ;
-height: 100%;
-display: flex;
-flex-direction: column;
-justify-content: space-around;
-transition: .5s ease;
-padding: 1rem;
+.project:hover .info {
+  display: block;
+  top: 0;
+  background-color: #1e2025e3;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.5s ease;
+  padding: 1rem;
+  color: var(--lightColor);
+  justify-content: center;
+  align-items: center;
 }
-.links{
+.links {
   width: 100%;
   font-size: 4rem;
   display: flex;
@@ -476,16 +473,200 @@ padding: 1rem;
   gap: 2rem;
 }
 
-.links i{
+.links i {
   color: var(--primarycololr);
-  
 }
-.links i:hover{
+.links i:hover {
   color: var(--blue);
   cursor: pointer;
-
 }
 
 /* **********************************************************
 ************************** Contact Section
 ************************************************************* */
+
+/* Add your own styles here or use a CSS framework like Bootstrap */
+#contact {
+  padding: 50px 0;
+  background-color: var(--bgColor-2);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #333;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: var(--primarycololr);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f5657d;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bgColor-1);
+  border-top: #ff274b solid 1px;
+  height: 20rem;
+}
+.footer a {
+  text-decoration: none;
+  color: #ddd4d4;
+}
+
+/* **********************************************************
+************************** Media Queries ********************************
+************************************************************* */
+
+@media screen and (max-width: 575px) {
+  :root {
+    --padding: 1.5rem;
+  }
+  html {
+    font-size: 40%;
+  }
+
+  body {
+    padding: var(--padding);
+    background-color: var(--bgColor-1);
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+    min-height: 110vh;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: var(--bgColor-1);
+    border-bottom: 1px solid var(--bgColor-2);
+  }
+
+  nav a {
+    display: none;
+  }
+
+  /* **********************************************************
+************************** About Section
+************************************************************* */
+
+  .img-content img {
+    display: none;
+  }
+
+  .about {
+    display: flex;
+    align-items: center;
+    height: 70vh;
+  }
+
+  /* **********************************************************
+************************** Services Section
+************************************************************* */
+  .box {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .card {
+    width: 25rem;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+  }
+
+  /* **********************************************************
+************************** Skills Section
+************************************************************* */
+
+  .skills-section {
+    height: 70vh;
+  }
+
+  .skills-content {
+    flex-wrap: wrap;
+  }
+
+  .skills {
+    display: none;
+  }
+
+  .img-skill-content {
+    padding: 0;
+  }
+
+  .skill-div {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  /* **********************************************************
+************************** Projects Section
+************************************************************* */
+
+  .projects-section {
+    padding-bottom: 5.4rem;
+  }
+
+  .projects-info {
+    padding: 3.6rem 0 2.2rem;
+  }
+
+  .projects {
+    gap: 4rem;
+  }
+  .project {
+    width: 295px;
+  }
+  /* **********************************************************
+************************** Contact Section
+************************************************************* */
+  form {
+    padding: 0 var(--padding);
+  }
+
+  input,
+  textarea {
+    border: 1px solid var(--primarycololr);
+  }
+}

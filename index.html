@@ -10,6 +10,7 @@
     />
     <meta name="description" content="Saber Ali Portfolio" />
     <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700&family=Inter:wght@400;500;700&family=Josefin+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -28,14 +29,17 @@
       <nav>
         <h2>
           <!-- <img src="./icon/Letter-S.png" alt=""> -->
-          Sab<span>er</span>.
+           Sab<span>er</span>.
         </h2>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Projects</a></li>
-          <button class="prim-btns">contact</button>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li>
+            <a href="#contact"><button class="prim-btns">contact</button></a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -70,7 +74,7 @@
           </div>
         </div>
         <div class="hero-img">
-          <img src="./img/hero-portfolio.jpg" alt="" />
+          <img src="./img/main.png" alt="" />
           <div class="red-line"></div>
         </div>
       </div>
@@ -78,7 +82,7 @@
     <!-- -------------------------------------------------
      --------------------  About Section
      ---------------------------------------------------->
-    <section class="about grid-2-col">
+    <section id="about" class="about grid-2-col">
       <div class="img-content">
         <img src="./img/Online games addiction-amico.png" alt="" />
       </div>
@@ -107,7 +111,7 @@
     <!-- -------------------------------------------------
      --------------------  Services Section
      ---------------------------------------------------->
-    <section class="services">
+    <section id="services" class="services">
       <h1 class="center"><span>Our</span> Services</h1>
       <div class="box">
         <div class="card">
@@ -116,8 +120,7 @@
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
             distinctio tempora alias recusandae id ea molestiae consequatur
-            sapiente ad quae voluptatum deleniti delectus, consectetur
-            voluptatem, rem sint corporis est obcaecati!
+            sapiente ad quae 
           </p>
         </div>
         <div class="card">
@@ -126,8 +129,7 @@
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
             distinctio tempora alias recusandae id ea molestiae consequatur
-            sapiente ad quae voluptatum deleniti delectus, consectetur
-            voluptatem, rem sint corporis est obcaecati!
+           
           </p>
         </div>
         <div class="card">
@@ -136,8 +138,7 @@
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
             distinctio tempora alias recusandae id ea molestiae consequatur
-            sapiente ad quae voluptatum deleniti delectus, consectetur
-            voluptatem, rem sint corporis est obcaecati!
+            
           </p>
         </div>
         <div class="card">
@@ -146,8 +147,7 @@
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque
             distinctio tempora alias recusandae id ea molestiae consequatur
-            sapiente ad quae voluptatum deleniti delectus, consectetur
-            voluptatem, rem sint corporis est obcaecati!
+           
           </p>
         </div>
       </div>
@@ -156,7 +156,7 @@
     <!-- -------------------------------------------------
      --------------------  Skills Section
      ---------------------------------------------------->
-    <section class="skills-section">
+    <section id="skills" class="skills-section">
       <h1 class=""><span>My</span> Skills</h1>
       <div class="skills-content">
         <div class="container">
@@ -239,14 +239,12 @@
     </section>
 
     <!-- -------------------------------------------------
-     --------------------  Skills Section
+     --------------------  Projects Section
      ---------------------------------------------------->
-    <section class="projects-section">
-      <!-- <a href="https://saberali1789.github.io/20-js-projects/" target="_blank"
-        >20-WEB-vanilla-Projects</a
-      > -->
+     <section id="projects" class="projects-section">
+    
       <div class="projects-info">
-        <h1>PROJECTS</h1>
+        <h1><span>My</span> Projects</h1>
       </div>
       <div class="projects">
       <div class="project">
@@ -315,20 +313,81 @@
    
       <div class="project">
         <div class="front">
-          <img src="img/appe.png" alt="">
+          <img src="img/javascript.jpg" alt="">
         </div>
         <div class="info">
-          <h2>Appie.</h2>
-          <p>Landing page created using HTML CSS only!
+          <h2>Javascript Projects</h2>
+          <p>20 Project Vanilla Javascript!
           </p>
           <div class="links">
-            <a href="https://saberali1789.github.io/Appie/" target="_blank"><i class="fa-solid fa-link"></i></a>
-            <a href="https://github.com/saberali1789/Kalbonyan-Elmarsos/blob/main/Albonyan-projects/Appie" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://saberali1789.github.io/20-js-projects/" target="_blank"
+        ><i class="fa-solid fa-link"></i></a>
+            <a href="https://github.com/saberali1789/20-js-projects" target="_blank"><i class="fa-brands fa-github"></i></a>
         </div>
         </div>
         
       </div>
     </div>
+    </section> 
+
+    <!-- -------------------------------------------------
+     --------------------  Contact Section
+     ---------------------------------------------------->
+
+
+    <section id="contact">
+      <div class="container">
+        <h1>Contact <span>Me</span></h1>
+        <form
+          id="contact-form"
+          method="post"
+          action="mailto:saberali1789@gmail.com"
+        >
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="prim-btns" id="submit-btn">Send Message</button>
+        </form>
+      </div>
     </section>
+
+    <!-- -------------------------------------------------
+     --------------------  Footer Section
+     ---------------------------------------------------->
+
+
+    <footer id="footer" class="footer">
+      <p>
+        Created By
+        <a href="https://github.com/saberali1789"><b>Saber Ali</b></a> &copy;
+        <span class="year"></span>
+      </p>
+      <div class="social">
+        <a
+          href="https://www.facebook.com/profile.php?id=100006593343885"
+          target="_blank"
+        >
+          <img src="./icon/facebook_logo_icon_147291 (1).ico" alt="" />
+        </a>
+        <a href="https://github.com/saberali1789" target="_blank"
+          ><img src="./icon/github_logo_icon_147285.ico" alt=""
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/saber-ali-31543b1b3/"
+          target="_blank"
+        >
+          <img src="./icon/linkedin_icon-icons.com_65929.ico" alt="" />
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
